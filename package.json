@@ -2,6 +2,7 @@
   "name": "background-gradient",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://emiliojeldes.github.io/background-gradient",
   "dependencies": {
     "normalize.css": "^8.0.0",
     "prop-types": "^15.6.2",
