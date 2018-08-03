@@ -5,6 +5,7 @@ import Gradient from "../Gradient/Gradient";
 import ColorPicker from "../ColorPicker/ColorPicker";
 import Title from "../Text/Text";
 import GeneratedCSS from "../GeneratedCSS/GeneratedCSS";
+import NotSupported from "../NotSupported/NotSupported";
 
 const styles = {
   container: {
@@ -13,7 +14,8 @@ const styles = {
     height: "100vh",
     width: "100vw",
     flexWrap: "wrap",
-    flexDirection: "column"
+    flexDirection: "column",
+    fontFamily: "Helvetica Neue, Helvetica, Arial, sans-serif;"
   }
 };
 
@@ -22,8 +24,21 @@ class GradientGenerator extends Component {
     gradient: {
       colors: [{ key: 1, color: "#1a9cff" }, { key: 2, color: "#cc00ff" }],
       degree: 90
-    }
+    },
+    message: ""
   };
+
+  componentDidMount() {
+    let isSafari =
+      /Safari/.test(navigator.userAgent) &&
+      /Apple Computer/.test(navigator.vendor);
+    if (isSafari) {
+      this.setState({
+        message:
+          "Input color no soportado en safari. Por favor usa Google Chrome, Firefox o Microsoft Edge"
+      });
+    }
+  }
 
   handleOnColorChange = (e, key) => {
     this.setState(state => {
@@ -45,6 +60,7 @@ class GradientGenerator extends Component {
     const { classes } = this.props;
     return (
       <div className={classes.container}>
+        <NotSupported message={this.state.message} />
         <Gradient gradient={this.state.gradient} />
         <Title />
         <ColorPicker
