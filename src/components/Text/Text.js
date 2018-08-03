@@ -4,7 +4,6 @@ import withStyles from "react-jss";
 const styles = {
   titleContainer: {
     textAlign: "center",
-    fontFamily: "Helvetica Neue, Helvetica, Arial, sans-serif;"
   },
   title: {
     color: "#eee",

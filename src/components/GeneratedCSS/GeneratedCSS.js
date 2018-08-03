@@ -6,7 +6,6 @@ const styles = {
   container: {
     marginTop: ".5em",
     textAlign: "center",
-    fontFamily: "Helvetica Neue, Helvetica, Arial, sans-serif",
     margin: "0 auto",
     display: "flex",
     alignItems: "center",
@@ -55,7 +54,7 @@ const GeneratedCSS = ({ classes, colors }) => {
       <div className={classes.cssWrapper}>
         <p className={classes.code}>
           background:
-          <span className={classes.blue}>linear-gradient</span>(
+          <span className={classes.blue}> linear-gradient</span>(
           <span className={classes.yellow}>90deg</span>,
           <span className={classes.yellow}> #</span>
           <span className={classes.blue}>{colors[0].color.replace(/^#/, "")}</span>,
