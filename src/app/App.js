@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React, { Fragment } from "react";
+import "normalize.css";
+import GradientGenerator from "../components/GradientGenerator/GradientGenerator";
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <h1>Ready</h1>
-      </div>
-    );
-  }
-}
+const App = props => {
+  return (
+    <Fragment>
+      <GradientGenerator />
+    </Fragment>
+  );
+};
 
 export default App;
