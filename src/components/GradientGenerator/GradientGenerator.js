@@ -35,7 +35,7 @@ class GradientGenerator extends Component {
     if (isSafari) {
       this.setState({
         message:
-          "Input color no soportado en safari. Por favor usa Google Chrome, Firefox o Microsoft Edge"
+          "Input color not supported on Safari. Please use Google Chrome, Firefox or Microsoft Edge"
       });
     }
   }
