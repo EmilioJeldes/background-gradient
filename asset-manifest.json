@@ -4,5 +4,6 @@
   "main.js": "static/js/main.d7103ba2.js",
   "main.js.map": "static/js/main.d7103ba2.js.map",
   "background": "#444",
-  "theme_color": "#444"
+  "theme_color": "#444",
+  "display": "standalone"
 }
